@@ -1,10 +1,10 @@
 ---
-# tasks file for my-first-ansible-role
+- include_vars: ../vars/main.yml
 - name: Install Docker
   service:
     name: "docker"
     state: started
     enabled: yes
+- name: Install Java Open JDK
   yum:
-    name: java-1.8.0-openjdk.x86_64
-    present: yes
+    name: '{{ jdk_version }}'
