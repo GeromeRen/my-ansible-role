@@ -1,10 +1,2 @@
 ---
-
-- name: Install Docker
-  service:
-    name: "docker"
-    state: started
-    enabled: yes
-- name: Install Java Open JDK
-  yum:
-    name: java-1.8.0-openjdk.x86_64
+jdk_version: java-1.8.0-openjdk.x86_64
